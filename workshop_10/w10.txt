@@ -1,0 +1,109 @@
+Script started on Sun 02 Dec 2018 08:11:47 PM EST
+]0;ogolan1@mtrx-node02pd:~/oop244/workshops/workshop10_solution[?1034h[ogolan1@mtrx-node02pd workshop10_solution]$ whoami
+ogolan1
+]0;ogolan1@mtrx-node02pd:~/oop244/workshops/workshop10_solution[ogolan1@mtrx-node02pd workshop10_solution]$ cat grah[Kde.h
+// File: w10.cpp
+// Date: 12/02/2018
+// Name: Omri Golan
+// Section: SGG
+// ID: 101160166
+// Email: ogolan1@myseneca.ca
+/////////////////////////////////////////
+
+
+#pragma once
+#ifndef GRADE_H
+#define GRADE_H
+
+char gradeIt(int mark, int maxMark)
+{
+	int totalMark = (static_cast<double>(mark) / static_cast<double>(maxMark)) * 100;
+	if (totalMark <= 50)
+	{
+		return 'F';
+	}
+	if (totalMark > 50 && totalMark <= 59)
+	{
+		return 'D';
+	}
+	else if (totalMark > 59 && totalMark <= 69)
+	{
+		return 'C';
+	}
+	else if (totalMark > 69 && totalMark <= 79)
+	{
+		return 'B';
+	}
+	else
+	{
+		return 'A';
+	}
+
+}
+
+template <typename grade>
+char gradeIt(const grade mark, const grade maxMark)
+{
+
+	grade totalMark = (static_cast<double>(mark) / static_cast<double>(maxMark)) * 100;
+	
+	if (totalMark <= 50)
+	{
+		return 'F';
+	}
+	if (totalMark > 50 && totalMark <= 59)
+	{
+		return 'D';
+	}
+	else if (totalMark > 59 && totalMark <= 69)
+	{
+		return 'C';
+	}
+	else if (totalMark > 69 && totalMark <= 79)
+	{
+		return 'B';
+	}
+	else
+	{
+		return 'A';
+	}
+}
+
+
+char gradeIt(char mark,char maxMark)
+{
+	if (mark == 'F' && maxMark == 'A')
+	{
+		return mark;
+	}
+	else if (mark == 'D' && maxMark == 'A')
+	{
+		return mark;
+	}
+	else if (mark == 'C' && maxMark == 'A')
+	{
+		return mark;
+	}
+	else if (mark == 'B' && maxMark == 'A')
+	{
+		return mark;
+	}
+	else
+	{
+		return maxMark;
+	}
+	
+}
+
+
+#endif]0;ogolan1@mtrx-node02pd:~/oop244/workshops/workshop10_solution[ogolan1@mtrx-node02pd workshop10_solution]$ g++ o[K-o 1[Kw10 w10.cpp
+]0;ogolan1@mtrx-node02pd:~/oop244/workshops/workshop10_solution[ogolan1@mtrx-node02pd workshop10_solution]$ w10
+D C A
+A F D
+F D C
+C F F
+
+]0;ogolan1@mtrx-node02pd:~/oop244/workshops/workshop10_solution[ogolan1@mtrx-node02pd workshop10_solution]$ exit
+exit
+
+Script done on Sun 02 Dec 2018 08:12:41 PM EST
